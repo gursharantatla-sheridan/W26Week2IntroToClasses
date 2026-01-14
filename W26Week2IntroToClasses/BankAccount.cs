@@ -26,6 +26,9 @@ namespace W26Week2IntroToClasses
 
 		public void Withdraw(double amount)
 		{
+			if (amount > Balance)
+				throw new Exception("Insufficient funds. Cannot withdraw more than the balance");
+
 			Balance -= amount;
 		}
     }

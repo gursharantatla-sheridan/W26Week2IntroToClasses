@@ -39,6 +39,29 @@
 
 
             int[] arr = { 2, 4, 5, 6, 4, 3, 3 };
+
+
+
+            Console.WriteLine("\n\n\n");
+
+
+
+            BankAccount myAcc = new BankAccount(500);
+            Console.WriteLine("Balance = " + myAcc.Balance.ToString("C"));
+
+            myAcc.Deposit(200);
+            Console.WriteLine("Balance = " + myAcc.Balance.ToString("C"));
+
+            try
+            {
+                myAcc.Withdraw(4000);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            Console.WriteLine("Balance = " + myAcc.Balance.ToString("C"));
         }
     }
 }
