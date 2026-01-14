@@ -43,7 +43,40 @@ namespace W26Week2IntroToClasses
         public string Name
         {
             get { return _name; }
-            set { _name = value; }
+            set
+            {
+                if (!string.IsNullOrEmpty(value))
+                   _name = value; 
+            }
         }
+
+        // expression-bodied property -> _price
+        public double Price
+        {
+            get => _price;
+            set => _price = value;
+        }
+
+        // auto-implemented property -> Quantity
+        // there is no private field for quantity
+        public int Quantity { get; set; }
+
+
+        // keyboard shortcuts -> properties
+
+        // propfull + tab
+        private int _num;
+
+        public int Num
+        {
+            get { return _num; }
+            set { _num = value; }
+        }
+
+        // prop + tab
+        public int MyProperty { get; set; }
+
+        // propg + tab
+        public int MyProperty1 { get; private set; }
     }
 }

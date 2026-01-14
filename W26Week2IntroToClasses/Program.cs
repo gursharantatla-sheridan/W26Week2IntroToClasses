@@ -12,6 +12,9 @@
             p1.Name = "John";
             Console.WriteLine(p1.Name);
 
+            p1.Quantity = 5;
+            Console.WriteLine(p1.Quantity);
+
 
             Product p2 = new Product(101, "Laptop", 1200);
 
@@ -22,6 +25,20 @@
             //Console.WriteLine(p1._price);
 
 
+            Product p6 = new Product();
+            p6.Name = "Mobile";
+            p6.Price = 2000;
+            p6.Quantity = 5;
+
+            Product p7 = new Product()
+            {
+                Name = "Tablet",
+                Price = 500,
+                Quantity = 5
+            };
+
+
+            int[] arr = { 2, 4, 5, 6, 4, 3, 3 };
         }
     }
 }
